@@ -160,7 +160,7 @@
         .hiro-slide {
             width: 100%;
             min-height: 100vh;
-            background-image: url(../img/slide.png);
+            background-image: url(slide.png);
             background-repeat: no-repeat;
             background-size: 50%;
             background-position: right bottom;
@@ -443,10 +443,6 @@
         .contact .item-contact h1 {
             font-size: 2rem;
             margin: 30px 0;
-        }
-
-        .contact .item-contact progress {
-            width: 100%;
         }
 
         .contact .item-contact button {
