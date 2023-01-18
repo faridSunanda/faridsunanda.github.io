@@ -1,0 +1,21 @@
+a{
+  text-decoration: none;
+}
+.jumbotron {
+  padding-top: 6rem;
+  background-image: url(img/slide.jpg);
+  background-position: top;
+  background-attachment: fixed;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+
+#projects a{
+  color: #333;
+}
+
+section {
+  padding-top: 5rem;
+}
