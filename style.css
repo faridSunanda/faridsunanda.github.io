@@ -463,6 +463,9 @@
         /*responsive for tablet*/
         @media(max-width:890px) {
             /*header open*/
+            header{
+                position: relative;
+            }
             header nav .hamburger {
                 display: block;
             }
@@ -476,7 +479,7 @@
                 transform: translateY(-8px) rotate(-45deg);
             }
             header nav ul {
-                position: fixed;
+                position: absolute;
                 right: 0;
                 top: 60px;
                 gap: 0;
@@ -555,6 +558,9 @@
     /*responsive for android*/
         @media(max-width:560px) {
             /*header open*/
+            .container{
+                width: 90%;
+            }
             /*header close*/
 
             /*jumbotron open*/
@@ -621,7 +627,7 @@
 
             .project .project-parent .project-item{
                 width: 100%;
-                height: 220px;
+                height: 200px;
             }
 
             .contact .contact-parent{
