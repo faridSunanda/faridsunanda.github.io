@@ -1,21 +1,648 @@
-a{
-  text-decoration: none;
-}
-.jumbotron {
-  padding-top: 6rem;
-  background-image: url(img/slide.jpg);
-  background-position: top;
-  background-attachment: fixed;
-}
+/* root open */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #191f26;
+            color: #e9ebf1;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul li{
+            list-style: none;
+        }
+        img{
+            max-width: 100%;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        /* root close */
 
-#projects {
-  background-color: #e2edff;
-}
+        /* header open */
+        header{
+            width: 100%;
+            background-color: #101418;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        header nav{
+            border: 1px solid #000;
+            width: 100%;
+            height: 80px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header nav .logo a{
+            color: #e9ebf1;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e9ebf1;
+        }
+        header nav ul{
+            width: 75%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 70px;
+            font-weight: bold;
+        }
+        header nav ul li a{
+            color: #e9ebf1;
+            padding: 3px 0;
+        }
+        header nav ul li a:hover{
+            color: rgb(25, 128, 255);
+        }
+        header nav .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        header nav .bar {
+            display: block;
+            border-radius: 3px;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #fff;
+        }
+        /* header close */
 
-#projects a{
-  color: #333;
-}
+        /* jumbotron open */
+        .jumbotron .jumbotron-parent{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item{
+            width: 50%;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item h1{
+            font-size: 3rem;
+            color: rgb(25, 128, 255);
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item h3{
+            font-size: 2rem;
+            margin: 15px 0;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item p{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item button{
+            padding: 15px 25px;
+            outline: none;
+            border: none;
+            background-color: rgb(25, 128, 255);
+            color: #e9ebf1;
+            margin-top: 25px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item button:hover{
+            box-shadow: 0px 5px 10px rgb(25, 128, 255);
+            transition: 0.5s;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item .sosmed{
+            width: 70%;
+            padding: 5px 0;
+            margin-top: 60px;
+            display: flex;
+            gap: 15px;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item .sosmed i{
+            background-color: rgb(25, 128, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item .sosmed i:hover{
+            transform: translateY(-10px);
+            transition: 0.5s;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item:last-child{
+            display: flex;
+            justify-content: center;
+        }
+        .jumbotron .jumbotron-parent .jumbotron-item .circle{
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-color: rgb(25, 128, 255);
+            box-shadow: 0px 10px 32px rgb(25, 128, 255);
+            background-image: url(img/slide.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* jumbotron close */
 
-section {
-  padding-top: 5rem;
-}
+        /* about open */
+        .about{
+            background-color: #272a36;
+            width: 100%;
+        }
+        .about .about-parent{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .about .about-parent .about-item{
+            width: 50%;
+        }
+        .about .about-parent .about-item .circle-border{
+            border: 4px solid rgb(25, 128, 255);
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-image: url(img/about.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .about .about-parent .about-item h1{
+            font-size: 2rem;
+            margin: 7px 0 15px 0;
+        }
+        .about .about-parent .about-item p{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+        }
+        .about .about-parent .about-item button{
+            padding: 15px 25px;
+            outline: none;
+            border: none;
+            background-color: rgb(25, 128, 255);
+            color: #e9ebf1;
+            margin-top: 25px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .about .about-parent .about-item button:hover{
+            box-shadow: 0px 5px 10px rgb(25, 128, 255);
+            transition: 0.5s;
+        }
+        /* about close */
+
+        /* skill open */
+        .skill{
+            background-color: #191f26;
+            width: 100%;
+        }
+        .skill .skill-parent{
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        .skill .skill-parent .skill-item{
+            width: 50%;
+        }
+        .skill .skill-parent .skill-item h1{
+            font-size: 2rem;
+            margin: 7px 0 15px 0;
+        }
+        .skill .skill-parent .skill-item p{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+        }
+        .skill .skill-parent .skill-item button{
+            padding: 15px 25px;
+            outline: none;
+            border: none;
+            background-color: rgb(25, 128, 255);
+            color: #e9ebf1;
+            margin-top: 25px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .skill .skill-parent .skill-item button:hover{
+            box-shadow: 0px 5px 10px rgb(25, 128, 255);
+            transition: 0.5s;
+        }
+        .skill .skill-parent .skill-item ul{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            height: 200px;
+            flex-wrap: wrap;
+            padding-left: 25px;
+        }
+        .skill .skill-parent .skill-item ul li span{
+            color: rgb(25, 128, 255);
+        }
+        /* skill close */
+
+        .title{
+            width: 100%;
+            text-align: center;
+        }
+        .title h1{
+            font-size: 2rem;
+            margin-top: 7px;
+        }
+
+        /* service open */
+        .service{
+            padding: 150px 0;
+            width: 100%;
+            background-color: #272a36;
+        }
+        .service .service-parent{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .service .service-parent .service-item{
+            border: 1px solid transparent;
+            width: 30%;
+            height: 400px;
+            text-align: center;
+            padding: 100px 10px 0;
+            border-radius: 10px;
+            background-color: #191f26;
+        }
+        .service .service-parent .service-item:hover{
+            border: 1px solid rgb(25, 128, 255);
+        }
+        .service .service-parent .service-item h1{
+            margin: 17px 0;
+        }
+        .service .service-parent .service-item i{
+            font-size: 3rem;
+            color: rgb(25, 128, 255);
+        }
+        .service .service-parent .service-item p{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+        }
+        /* service close */
+
+        /* project open */
+        .project{
+            padding: 100px 0;
+            width: 100%;
+        }
+        .project .project-parent{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 50px;
+        }
+        .project .project-parent .project-item{
+            width: 30%;
+            height: 200px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #272a36;
+            overflow: hidden;
+            position: relative;
+        }
+        .project .project-parent .project-item .image-desc{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(25, 128, 255, 0.5);
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            animation: project 0.5s alternate;
+            display: none;
+        }
+        @keyframes project{
+            from{
+                bottom: -200px;
+            }to{
+                bottom: 0;
+            }
+        }
+        .project .project-parent .project-item:hover .image-desc{
+            display: block;
+        }
+        .project .project-parent .project-item .image-desc h4{
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+        .project .project-parent .project-item .image-desc a{
+            color: #fff;
+        }
+        /* project close */
+
+        /* contact open */
+        .contact{
+            padding: 150px 0;
+            width: 100%;
+            background-color: #272a36;
+        }
+        .contact .contact-parent{
+            width: 60%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .contact .contact-parent input{
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 1rem;
+            outline: none;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            background-color: #191f26;
+            color: #e9ebf1;
+        }
+        .contact .contact-parent input:focus,
+        .contact .contact-parent textarea:focus{
+            border: 1px solid rgb(25, 128, 255);
+        }
+        .contact .contact-parent textarea{
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            outline: none;
+            border: 1px solid transparent;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #191f26;
+            color: #e9ebf1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contact .contact-parent button{
+            padding: 15px 25px;
+            outline: none;
+            border: none;
+            background-color: rgb(25, 128, 255);
+            color: #e9ebf1;
+            margin-top: 25px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .contact .contact-parent button:hover{
+            box-shadow: 0px 5px 10px rgb(25, 128, 255);
+            transition: 0.5s;
+        }
+        /* contact close */
+
+        /* footer open */
+        footer{
+            width: 100%;
+        }
+        footer .footer-parent{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 200px;
+        }
+        footer .footer-parent .footer-item{
+            width: 32%;
+        }
+        footer .footer-parent .footer-item h1{
+            font-size: 2.5rem;
+            margin-block: 10px;
+        }
+        footer .footer-parent .footer-item:nth-child(2){
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        footer .footer-parent .footer-item:nth-child(2) i{
+            background-color: rgb(25, 128, 255);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        footer .footer-parent .footer-item:nth-child(2) i:hover{
+            transform: translateY(-10px);
+            transition: 0.5s;
+        }
+        footer .footer-parent .footer-item:last-child{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.8rem;
+        }
+        /* footer close */
+
+
+        /*responsive for tablet*/
+        @media(max-width:890px) {
+            /*header open*/
+            header nav .hamburger {
+                display: block;
+            }
+            header nav .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            header nav .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            header nav .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            header nav ul {
+                position: fixed;
+                right: 0;
+                top: 60px;
+                gap: 0;
+                flex-direction: column;
+                background-color: #101418;
+                width: 100%;
+                text-align: center;
+                transition: 0.5s;
+                display: none;
+            }
+            header nav ul li {
+                margin: 16px 0;
+            }
+            header nav ul.active {
+                top: 60px;
+                display: flex;
+            }
+            /*header close*/
+
+            /*jumbotron open*/
+            .jumbotron .jumbotron-parent{
+                height: auto;
+                flex-direction: column-reverse;
+                margin-top: 100px;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item{
+                width: 100%;
+                padding: 50px 0;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item .circle{
+                width: 300px;
+                height: 300px;
+            }
+            /*jumbotron close*/
+
+            /*about open*/
+            .about .about-parent{
+                align-content: center;
+            }
+            .about .about-parent .about-item{
+                width: 100%;
+            }
+            /*about close*/
+            /*service open*/
+            .service .service-parent{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .service .service-parent .service-item{
+                width: 45%;
+            }
+            /*service close*/
+
+            .project .project-parent .project-item{
+                width: 45%;
+                height: 170px;
+            }
+
+            .contact .contact-parent{
+                width: 70%;
+            }
+
+
+            footer .footer-parent .footer-item h1{
+                font-size: 2rem;
+            }
+            footer .footer-parent .footer-item:nth-child(2){
+                display: none;
+            }
+            footer .footer-parent .footer-item:nth-child(3){
+                width: 60%;
+            }
+    }
+
+    /*responsive for android*/
+        @media(max-width:560px) {
+            /*header open*/
+            /*header close*/
+
+            /*jumbotron open*/
+            .jumbotron .jumbotron-parent{
+                height: auto;
+                flex-direction: column-reverse;
+                margin-top: 100px;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item{
+                width: 100%;
+                padding: 50px 0;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item h1{
+            font-size: 2rem;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item h3{
+                font-size: 1.4rem;
+            }
+            .jumbotron .jumbotron-parent .jumbotron-item .circle{
+                width: 200px;
+                height: 200px;
+            }
+            /*jumbotron close*/
+
+            /*about open*/
+            .about .about-parent{
+                align-content: center;
+            }
+            .about .about-parent .about-item{
+                width: 100%;
+            }
+            .about .about-parent .about-item .circle-border{
+                width: 250px;
+                height: 250px;
+            }
+            .about .about-parent .about-item h1{
+                font-size: 1.7rem;
+            }
+            /*about close*/
+            /*skill open*/
+            .skill .skill-parent{
+                flex-wrap: wrap;
+            }
+            .skill .skill-parent .skill-item{
+                width: 100%;
+            }
+            .skill .skill-parent .skill-item h1{
+                font-size: 1.7rem;
+            }
+            /*skill close*/
+            .title h1{
+                font-size: 1.7rem;
+            }
+            /*service open*/
+            .service .service-parent{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .service .service-parent .service-item{
+                width: 100%;
+            }
+            /*service close*/
+
+            .project .project-parent .project-item{
+                width: 100%;
+                height: 220px;
+            }
+
+            .contact .contact-parent{
+                width: 100%;
+            }
+
+
+            footer .footer-parent .footer-item h1{
+                font-size: 2rem;
+            }
+            footer .footer-parent .footer-item:nth-child(2){
+                display: flex;
+                padding: 50px 0;
+            }
+            footer .footer-parent .footer-item{
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+            }
+            footer .footer-parent .footer-item:nth-child(3){
+                width: 100%;
+                justify-content: center;
+            }
+    }
