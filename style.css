@@ -311,19 +311,23 @@
         .project .project-parent{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             margin-top: 50px;
             gap: 50px;
         }
         .project .project-parent .project-item{
             width: 30%;
-            height: 200px;
             text-align: center;
             border-radius: 10px;
             background-color: #272a36;
             overflow: hidden;
             position: relative;
+            object-fit: fill;
+            aspect-ratio: 16/9;
+        }
+        .project .project-parent .project-item img{
+            object-fit: cover;
         }
         .project .project-parent .project-item .image-desc{
             position: absolute;
